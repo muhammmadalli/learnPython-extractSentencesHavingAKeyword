@@ -34,3 +34,29 @@ def extract_sentences():
         messagebox.showinfo("Success", f"Found {len(matching_sentences)} sentences. Saved to {output_file}.")
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {str(e)}")
+
+# GUI setup
+root = tk.Tk()
+root.title("Sentence Extractor")
+
+# Input file selection
+tk.Label(root, text="Input File:").grid(row=0, column=0, padx=5, pady=5)
+input_entry = tk.Entry(root, width=50)
+input_entry.grid(row=0, column=1, padx=5, pady=5)
+tk.Button(root, text="Browse", command=select_input_file).grid(row=0, column=2, padx=5, pady=5)
+
+# Keyword entry
+tk.Label(root, text="Keyword:").grid(row=1, column=0, padx=5, pady=5)
+keyword_entry = tk.Entry(root, width=50)
+keyword_entry.grid(row=1, column=1, padx=5, pady=5)
+
+# Output file selection
+tk.Label(root, text="Output File:").grid(row=2, column=0, padx=5, pady=5)
+output_entry = tk.Entry(root, width=50)
+output_entry.grid(row=2, column=1, padx=5, pady=5)
+tk.Button(root, text="Browse", command=select_output_file).grid(row=2, column=2, padx=5, pady=5)
+
+# Extract button
+tk.Button(root, text="Extract Sentences", command=extract_sentences).grid(row=3, column=0, columnspan=3, pady=10)
+
+root.mainloop()
