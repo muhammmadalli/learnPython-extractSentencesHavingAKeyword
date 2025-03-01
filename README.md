@@ -1,6 +1,6 @@
 Quantic School of Business and Technology Course\
 ChatGPT Prompts For Programming\
-napp.quantic.edu\
+app.quantic.edu\
 \
 Exercise 4\
 Python Program 3\
